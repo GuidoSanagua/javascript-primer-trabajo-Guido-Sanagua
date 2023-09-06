@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: cursive;
+}
+
+body {
+    background-color: rgb(14, 26, 138);
+    color: rgb(211, 159, 99);
+
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: rgb(211, 159, 99);
+    color: rgb(14, 26, 138);
+    border-bottom-left-radius: 4rem;
+    border-bottom-right-radius: 4rem;
+}
+
+main {
+    display: flex;
+    padding: 2rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.instrucciones {
+    margin-bottom: 2rem;
+}
+
+.marcador {
+    background-color: rgb(211, 159, 99);
+    color: black;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.marcador .nombre {
+    position: absolute;
+    color: white;
+    background-color: rgb(14, 26, 138) ;
+    line-height: 1;
+    padding: .5rem;
+    border-radius: .5rem;
+    border: 2px solid  rgb(185, 130, 9);
+}
+.marcador .nombre-jugador{
+    right: 80%;
+
+}
+.marcador .nombre-maquina{
+    left: 80%;
+}
+.marcador .puntos{
+    font-size: 2rem;
+}
+.elegi-tu-movimiento{
+   margin-bottom: 2rem;
+}
+.elegi-tu-movimiento h2{
+    font-size: 1.2rem;
+    margin-bottom: .5rem;
+    font-weight: 400;
+}
+.movimientos{
+display: flex;
+justify-content: center;
+gap: 1rem;
+}
+.movimiento{
+    font-size: 2rem;
+    background-color: rgb(211, 159, 99) ;
+    border: 0;
+    padding: .5rem;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+.mensaje{
+    margin-bottom: 2rem;
+    line-height: 1.8rem;
+}
+ .mensaje .eleccion{
+    background-color: rgb(211, 159, 99) ;
+    color: rgb(14, 26, 138)  ;
+    border-radius: 0.25rem;
+}
+.btn{
+    background-color: rgb(211, 159, 99) ;
+    color:  rgb(14, 26, 138) ;
+    border: 0;
+    border-radius: 1rem;
+    padding: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.disabled{
+    display: none;
+}

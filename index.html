@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Juego simple</title>
+</head>
+
+<body>
+    <header>
+        <h1>¡Piedra, papel o tijeras!</h1>
+        <p>Primer entrega Javascript</p>
+    </header>
+    <main>
+        <p class="instrucciones" id="instrucciones">
+            El primero en llegar a 5 puntos gana
+        </p>
+        <div class="marcador">
+            <p class="nombre nombre-jugador">Jugador</p>
+            <p class="nombre nombre-maquina">Maquina</p>
+            <p class="puntos">
+                <span id="puntos-usuarios">0</span>
+                <span>-</span>
+                <span id="puntos-maquina">0</span>
+            </p>
+        </div>
+        <div class="elegi-tu-movimiento" id="elegi-tu-movimiento">
+            <h2>Elegí tu movimiento para el proximo turno.</h2>
+        </div>
+        <div class="movimientos">
+            <button class="movimiento" id="piedra💎">💎</button>
+            <button class="movimiento" id="papel📋">📋</button>
+            <button class="movimiento" id="tijera✂">✂</button>
+        </div>
+        <br>
+        <div class="mensaje disabled" id="mensaje">
+            <p>
+                Usaste <span class="eleccion" id="eleccion-usuario">papel📋</span><br>
+                la computadora usó <span class="eleccion" id="eleccion-maquina">piedra💎</span>
+            </p>
+            <p id="gana-punto">¡Ganaste un punto!</p>
+        </div>
+        <button class="btn" id="reset">
+         <a href="./index.html">  
+         Reset</button></a> 
+       
+    </main>
+    <script src="./js/main.js"></script>
+
+
+</body>
+
+</html>

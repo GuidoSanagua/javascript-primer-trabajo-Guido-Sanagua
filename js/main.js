@@ -1,11 +1,16 @@
+Swal.fire('¡Comienza el juego!')
+const puntosJugadorGuardados = localStorage.getItem("puntosJugador");
+const puntosMaquinaGuardados = localStorage.getItem("puntosMaquina");
+
+
+let puntosJugador = puntosJugadorGuardados !== null ? parseInt(puntosJugadorGuardados) : 0;
+let puntosMaquina = puntosMaquinaGuardados !== null ? parseInt(puntosMaquinaGuardados) : 0;
+
 const opciones = [
     { id: "piedra💎", nombre: "Piedra💎", numeroDeMovimiento: 1 },
     { id: "papel📋", nombre: "Papel📋", numeroDeMovimiento: 2 },
     { id: "tijera✂", nombre: "Tijera✂", numeroDeMovimiento: 3 }
 ];
-
-let puntosJugador = 0;
-let puntosMaquina = 0;
 
 const instrucciones = document.querySelector("#instrucciones");
 const ContenedorPuntosJugador = document.querySelector("#puntos-usuarios");
@@ -75,6 +80,10 @@ function actualizarPuntos(resultado) {
     ContenedorPuntosJugador.innerText = puntosJugador;
     ContenedorPuntosMaquina.innerText = puntosMaquina;
 
+
+    localStorage.setItem("puntosJugador", puntosJugador);
+    localStorage.setItem("puntosMaquina", puntosMaquina);
+
     console.log("Puntos del jugador:", puntosJugador);
     console.log("Puntos de la máquina:", puntosMaquina);
 }
@@ -89,8 +98,5 @@ function reiniciarJuego() {
     puntosJugador = 0;
     puntosMaquina = 0;
     ContenedorPuntosJugador.innerText = puntosJugador;
-    ContenedorPuntosMaquina.innerText = puntosMaquina;
-    instrucciones.innerText = "El primero en llegar a 5 puntos gana";
-
-    console.log("Reiniciando el juego...");
 }
+
